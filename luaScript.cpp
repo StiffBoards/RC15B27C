@@ -148,6 +148,9 @@ lua_State *luaScriptInit(char *buff) {
     lua_register(L, "_OX", luaObjPosx);
     lua_register(L, "_OY", luaObjPosy);
     lua_register(L, "_OZ", luaObjPosz);
+    lua_register(L, "_OWX", luaGetObjWx);
+    lua_register(L, "_OWY", luaGetObjWy);
+    lua_register(L, "_OWZ", luaGetObjWz);
     lua_register(L, "_X", luaPosx);
     lua_register(L, "_Y", luaPosy);
     lua_register(L, "_Z", luaPosz);

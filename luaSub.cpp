@@ -421,6 +421,27 @@ int luaGetObjVz(lua_State *L)
 	else lua_pushnumber(L,World->Object[(int)no]->V.z);
 	return 1;
 }
+int luaGetObjWx(lua_State *L)
+{
+	int no=(int)lua_tonumber(L, 1);
+	if(no<0 || no>=GOBJMAX || World->Object[(int)no]==NULL) lua_pushnumber(L,0);
+	else lua_pushnumber(L,World->Object[(int)no]->W.x);
+	return 1;
+}
+int luaGetObjWy(lua_State *L)
+{
+	int no=(int)lua_tonumber(L, 1);
+	if(no<0 || no>=GOBJMAX || World->Object[(int)no]==NULL) lua_pushnumber(L,0);
+	else lua_pushnumber(L,World->Object[(int)no]->W.y);
+	return 1;
+}
+int luaGetObjWz(lua_State *L)
+{
+	int no=(int)lua_tonumber(L, 1);
+	if(no<0 || no>=GOBJMAX || World->Object[(int)no]==NULL) lua_pushnumber(L,0);
+	else lua_pushnumber(L,World->Object[(int)no]->W.z);
+	return 1;
+}
 int luaGetObjM(lua_State *L)
 {
 	int no=(int)lua_tonumber(L, 1);

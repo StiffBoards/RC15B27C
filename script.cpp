@@ -238,6 +238,21 @@ double  ObjVelz(double no)
 	if(no<0 || no>=World->ObjectCount) return 0.0;
 	return World->Object[(int)no]->V.z;
 }
+double  ObjWx(double no)
+{
+	if(no<0 || no>=World->ObjectCount) return 0.0;
+	return World->Object[(int)no]->V.x;
+}
+double  ObjWy(double no)
+{
+	if(no<0 || no>=World->ObjectCount) return 0.0;
+	return World->Object[(int)no]->W.y;
+}
+double  ObjWz(double no)
+{
+	if(no<0 || no>=World->ObjectCount) return 0.0;
+	return World->Object[(int)no]->W.z;
+}
 double  getType(double no)
 {
 	if(no<0 || no>=ChipCount) return 0.0;
@@ -967,6 +982,9 @@ struct funrec{
 	{"_OVX",NULL,ObjVelx,NULL,NULL,1},
 	{"_OVY",NULL,ObjVely,NULL,NULL,1},
 	{"_OVZ",NULL,ObjVelz,NULL,NULL,1},
+	{"_OWX",NULL,ObjWx,NULL,NULL,1},
+	{"_OWY",NULL,ObjWy,NULL,NULL,1},
+	{"_OWZ",NULL,ObjWz,NULL,NULL,1},
 	{"_AX",NULL,ax,NULL,NULL,1},	//角度（バグ有り）
 	{"_AY",NULL,ay,NULL,NULL,1},
 	{"_AZ",NULL,az,NULL,NULL,1},

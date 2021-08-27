@@ -1413,6 +1413,9 @@ int luaSystemInit() {
     lua_register(SystemL, "_OVX",luaGetObjVx);
     lua_register(SystemL, "_OVY",luaGetObjVy);
     lua_register(SystemL, "_OVZ",luaGetObjVz);
+    lua_register(SystemL, "_OWX", luaGetObjWx);
+    lua_register(SystemL, "_OWY", luaGetObjWy);
+    lua_register(SystemL, "_OWZ", luaGetObjWz);
     lua_register(SystemL, "_MOBJ", luaGetObjM);
     lua_register(SystemL, "_IOBJ", luaGetObjI);
     lua_register(SystemL, "_E", luaGetEnergy);
